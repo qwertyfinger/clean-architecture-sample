@@ -1,7 +1,9 @@
 # clean-architecture-sample
 Small and simple project I created a while ago showcasing usage of Clean Architecture ideas.  
 And some very simple but still pretty addictive SeekBar animations.  
-Presentation layer is built using the MVP pattern.
+Presentation layer is built using the MVP pattern.  
+
+Also packed inside: RxJava, Dagger.
 
 *Note: all the data inside is purposefully meaningless, don't try to make sense of it :)*
 
