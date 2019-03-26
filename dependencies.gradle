@@ -1,0 +1,52 @@
+/*
+ * Copyright (c) 2019 Andrii Chubko
+ */
+
+ext {
+  //Android
+  buildToolsVersion = '28.0.3'
+  minSdkVersion = 16
+  targetSdkVersion = 28
+  compileSdkVersion = 28
+
+  //Libraries
+  kotlinVersion = '1.3.21'
+  constraintLayoutVersion = '1.0.2'
+  supportLibraryVersion = '28.0.0'
+  textFieldBoxesVersion = '1.4.4'
+  materialDialogsVersion = '0.9.6.0'
+  daggerVersion = '2.21'
+  rxJavaVersion = '2.2.7'
+  rxKotlinVersion = '2.3.0'
+  rxAndroidVersion = '2.1.1'
+  ankoVersion = '0.10.8'
+  moshiVersion = '1.5.0'
+  kotshiVersion = '1.0.2'
+  okioVersion = '1.14.0'
+  timberVersion = '4.7.1'
+  leakCanaryVersion = '1.6.3'
+
+  appDependencies = [
+      kotlin:               "org.jetbrains.kotlin:kotlin-stdlib-jdk8:${kotlinVersion}",
+      appCompatV7:          "com.android.support:appcompat-v7:${supportLibraryVersion}",
+      supportDesign:        "com.android.support:design:${supportLibraryVersion}",
+      constraintLayout:     "com.android.support.constraint:constraint-layout:${constraintLayoutVersion}",
+      textFieldBoxes:       "com.github.HITGIF:TextFieldBoxes:${textFieldBoxesVersion}",
+      materialDialogs:      "com.afollestad.material-dialogs:core:${materialDialogsVersion}",
+      dagger:               "com.google.dagger:dagger:${daggerVersion}",
+      daggerCompiler:       "com.google.dagger:dagger-compiler:${daggerVersion}",
+      rxKotlin:             "io.reactivex.rxjava2:rxkotlin:${rxKotlinVersion}",
+      rxAndroid:            "io.reactivex.rxjava2:rxandroid:${rxAndroidVersion}",
+      rxJava:               "io.reactivex.rxjava2:rxjava:${rxJavaVersion}",
+      ankoCommons:          "org.jetbrains.anko:anko-commons:${ankoVersion}",
+      ankoDesign:           "org.jetbrains.anko:anko-design:${ankoVersion}",
+      ankoSdk15Listeners:   "org.jetbrains.anko:anko-sdk15-listeners:${ankoVersion}",
+      moshi:                "com.squareup.moshi:moshi:${moshiVersion}",
+      kotshi:               "se.ansman.kotshi:api:${kotshiVersion}",
+      kotshiCompiler:       "se.ansman.kotshi:compiler:${kotshiVersion}",
+      okio:                 "com.squareup.okio:okio:${okioVersion}",
+      timber:               "com.jakewharton.timber:timber:${timberVersion}",
+      leakCanary:           "com.squareup.leakcanary:leakcanary-android:${leakCanaryVersion}",
+      leakCanaryNoOp:       "com.squareup.leakcanary:leakcanary-android-no-op:${leakCanaryVersion}",
+  ]
+}

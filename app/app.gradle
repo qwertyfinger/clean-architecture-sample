@@ -1,0 +1,117 @@
+/*
+ * Copyright (c) 2019 Andrii Chubko
+ */
+
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'com.getkeepsafe.dexcount'
+
+android {
+  def globalConfiguration = rootProject.extensions.getByName("ext")
+
+  compileSdkVersion globalConfiguration["targetSdkVersion"]
+  buildToolsVersion globalConfiguration["buildToolsVersion"]
+
+  defaultConfig {
+    applicationId "com.qwertyfinger.cleanarchitecturesample"
+    minSdkVersion globalConfiguration["minSdkVersion"]
+    targetSdkVersion globalConfiguration["targetSdkVersion"]
+    vectorDrawables.useSupportLibrary = true
+  }
+
+  signingConfigs {
+    debug {
+      storeFile file('../keystore/sample-key.jks')
+      storePassword 'qwerty'
+      keyAlias 'key0'
+      keyPassword 'qwerty'
+    }
+    release {
+      storeFile file("../keystore/sample-key.jks")
+      storePassword "qwerty"
+      keyAlias "key0"
+      keyPassword "qwerty"
+    }
+  }
+
+  buildTypes {
+    debug {
+      applicationIdSuffix '.debug'
+      versionNameSuffix '-debug'
+      signingConfig signingConfigs.debug
+      minifyEnabled true
+      useProguard true
+      proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'),
+          'proguard-rules-debug.pro'
+    }
+    release {
+      signingConfig signingConfigs.release
+      shrinkResources true
+      minifyEnabled true
+      useProguard true
+      proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+    }
+  }
+
+  compileOptions {
+    sourceCompatibility JavaVersion.VERSION_1_8
+    targetCompatibility JavaVersion.VERSION_1_8
+  }
+
+  lintOptions {
+    abortOnError false
+  }
+}
+
+androidExtensions {
+  experimental = true
+}
+
+kapt {
+  correctErrorTypes = true
+  useBuildCache = true
+  mapDiagnosticLocations = true
+}
+
+dependencies {
+  def appDependencies = rootProject.ext.appDependencies
+
+  implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+  implementation appDependencies.kotlin
+  implementation appDependencies.appCompatV7
+  implementation appDependencies.supportDesign
+  implementation appDependencies.constraintLayout
+  implementation appDependencies.textFieldBoxes
+  implementation appDependencies.materialDialogs
+  implementation appDependencies.dagger
+  implementation appDependencies.rxJava
+  implementation appDependencies.rxKotlin
+  implementation appDependencies.rxAndroid
+  implementation appDependencies.ankoCommons
+  implementation appDependencies.ankoDesign
+  implementation appDependencies.ankoSdk15Listeners
+  implementation appDependencies.moshi
+  implementation appDependencies.kotshi
+  implementation appDependencies.okio
+  implementation appDependencies.timber
+
+  debugImplementation appDependencies.leakCanary
+  releaseImplementation appDependencies.leakCanaryNoOp
+
+  kapt appDependencies.daggerCompiler
+  kapt appDependencies.kotshiCompiler
+}
+
+dexcount {
+  format = "list"
+  includeClasses = false
+  includeClassCount = false
+  includeFieldCount = true
+  includeTotalMethodCount = true
+  orderByMethodCount = false
+  verbose = true
+  runOnEachPackage = true
+}

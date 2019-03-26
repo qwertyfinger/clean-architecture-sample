@@ -1,0 +1,73 @@
+<!--
+  ~ Copyright (c) 2019 Andrii Chubko
+  -->
+
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+  <!-- Base application theme. -->
+  <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <!-- Customize your theme here. -->
+    <item name="colorPrimary">@color/colorPrimary</item>
+    <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+    <item name="colorAccent">@color/colorAccent</item>
+    <item name="android:colorBackground">@color/colorBackground</item>
+    <item name="android:textColorPrimary">@color/primaryText</item>
+    <item name="android:textColorSecondary">@color/secondaryText</item>
+    <item name="android:textColorTertiary">@color/textColorTertiary</item>
+  </style>
+
+  <style name="AppTheme.NoActionBar">
+    <item name="windowActionBar">false</item>
+    <item name="windowNoTitle">true</item>
+  </style>
+
+  <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
+  <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+
+  <style name="ParameterFieldBox">
+    <item name="alwaysShowHint">true</item>
+    <item name="useDenseSpacing">true</item>
+    <item name="hasClearButton">true</item>
+  </style>
+
+  <style name="ParameterField">
+    <item name="android:inputType">numberDecimal</item>
+    <item name="android:imeOptions">actionNext</item>
+    <item name="android:maxLines">1</item>
+    <item name="android:hint">@string/field_hint</item>
+  </style>
+
+  <style name="ParameterTitle">
+    <item name="android:textSize">@dimen/param_text_size</item>
+    <item name="android:singleLine">true</item>
+    <item name="android:ellipsize">end</item>
+  </style>
+
+  <style name="ParameterValue">
+    <item name="android:textSize">@dimen/param_text_size</item>
+    <item name="android:textColor">@color/primaryText</item>
+    <item name="android:gravity">end</item>
+    <item name="android:singleLine">true</item>
+    <item name="android:ellipsize">end</item>
+  </style>
+
+  <style name="SeekBarButton">
+    <item name="android:padding">@dimen/seekbar_button_padding</item>
+    <item name="android:background">?attr/selectableItemBackgroundBorderless</item>
+  </style>
+
+  <style name="ParameterSeekBar">
+    <item name="android:progressDrawable">@drawable/ll_seekbar</item>
+    <item name="android:splitTrack" tools:ignore="NewApi">false</item>
+  </style>
+
+  <style name="NationalitySelector">
+    <item name="android:padding">6dp</item>
+    <item name="android:paddingStart" tools:ignore="NewApi">12dp</item>
+    <item name="android:paddingEnd" tools:ignore="NewApi">12dp</item>
+    <item name="android:background">@drawable/btn_nationality</item>
+    <item name="android:button">@null</item>
+  </style>
+
+</resources>

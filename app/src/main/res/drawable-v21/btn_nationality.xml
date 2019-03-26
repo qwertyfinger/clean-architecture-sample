@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2019 Andrii Chubko
+  -->
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <item
+      android:state_checked="true"
+      android:drawable="@drawable/btn_nationality_green"
+      />
+
+  <item android:drawable="@drawable/btn_nationality_grey" />
+
+</selector>

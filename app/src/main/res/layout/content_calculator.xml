@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2019 Andrii Chubko
+  -->
+
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="ui.calculator.expectancy.CalculateExpectancyActivity"
+    tools:showIn="@layout/activity_calculator"
+    >
+
+  <android.support.constraint.ConstraintLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:clipChildren="false"
+      android:paddingStart="@dimen/screen_side_margin"
+      android:paddingEnd="@dimen/screen_side_margin"
+      android:paddingBottom="@dimen/screen_side_margin"
+      android:paddingTop="@dimen/screen_top_margin"
+      >
+
+    <RadioGroup
+        android:id="@+id/nationalityRadioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+      <RadioButton
+          android:id="@+id/nationalityKor"
+          style="@style/NationalitySelector"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginEnd="@dimen/nationality_btn_margin_end"
+          android:layout_marginRight="@dimen/nationality_btn_margin_end"
+          android:text="@string/usd_code"
+          />
+
+      <RadioButton
+          android:id="@+id/nationalityJap"
+          style="@style/NationalitySelector"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginEnd="@dimen/nationality_btn_margin_end"
+          android:layout_marginRight="@dimen/nationality_btn_margin_end"
+          android:text="@string/eur_code"
+          />
+
+      <RadioButton
+          android:id="@+id/nationalityChi"
+          style="@style/NationalitySelector"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginEnd="@dimen/nationality_btn_margin_end"
+          android:layout_marginRight="@dimen/nationality_btn_margin_end"
+          android:text="@string/gbp_code"
+          />
+
+    </RadioGroup>
+
+    <studio.carbonylgroup.textfieldboxes.TextFieldBoxes
+        android:id="@+id/aab"
+        style="@style/ParameterFieldBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:labelText="@string/manliness_capacity"
+        app:layout_constraintTop_toBottomOf="@id/nationalityRadioGroup"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+
+      <studio.carbonylgroup.textfieldboxes.ExtendedEditText
+          android:id="@+id/tnz"
+          style="@style/ParameterField"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          app:suffix="@string/mile_suffix"
+          />
+
+    </studio.carbonylgroup.textfieldboxes.TextFieldBoxes>
+
+    <studio.carbonylgroup.textfieldboxes.TextFieldBoxes
+        android:id="@+id/gmpBox"
+        style="@style/ParameterFieldBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/param_box_margin_top"
+        app:labelText="@string/dumbo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/aab"
+        >
+
+      <studio.carbonylgroup.textfieldboxes.ExtendedEditText
+          android:id="@+id/klmEditText"
+          style="@style/ParameterField"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          app:suffix="@string/millions_suffix"
+          />
+
+    </studio.carbonylgroup.textfieldboxes.TextFieldBoxes>
+
+    <studio.carbonylgroup.textfieldboxes.TextFieldBoxes
+        android:id="@+id/gnnBox"
+        style="@style/ParameterFieldBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/param_box_margin_top"
+        app:labelText="@string/foals"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/gmpBox"
+        >
+
+      <studio.carbonylgroup.textfieldboxes.ExtendedEditText
+          android:id="@+id/ttrEditText"
+          style="@style/ParameterField"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          app:suffix="@string/millions_suffix"
+          />
+
+    </studio.carbonylgroup.textfieldboxes.TextFieldBoxes>
+
+    <TextView
+        android:id="@+id/sadTitle"
+        style="@style/ParameterTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/param_title_margin_top"
+        android:text="@string/sugar"
+        app:layout_constraintEnd_toStartOf="@id/kpaValue"
+        app:layout_constraintStart_toStartOf="@id/jkgSeekBar"
+        app:layout_constraintTop_toBottomOf="@id/gnnBox"
+        app:layout_constraintHorizontal_weight="4"
+        tools:text="Capacity factor"
+        />
+
+    <TextView
+        android:id="@+id/kpaValue"
+        style="@style/ParameterValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/sadTitle"
+        app:layout_constraintEnd_toEndOf="@id/jkgSeekBar"
+        app:layout_constraintBaseline_toBaselineOf="@id/sadTitle"
+        app:layout_constraintHorizontal_weight="1"
+        tools:text="100%"
+        />
+
+    <ImageView
+        android:id="@+id/iutDecrement"
+        style="@style/SeekBarButton"
+        android:layout_width="@dimen/seekbar_button_size"
+        android:layout_height="@dimen/seekbar_button_size"
+        android:contentDescription="@string/sugar_decrease_content_description"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/jkgSeekBar"
+        app:layout_constraintTop_toBottomOf="@id/sadTitle"
+        app:layout_constraintBottom_toBottomOf="@id/jkgSeekBar"
+        app:layout_constraintWidth_default="wrap"
+        app:srcCompat="@drawable/vd_remove_black_24dp"
+        />
+
+    <SeekBar
+        android:id="@+id/jkgSeekBar"
+        style="@style/ParameterSeekBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:maxHeight="@dimen/seekbar_max_height"
+        android:layout_marginEnd="@dimen/seekbar_margin_sides"
+        android:layout_marginStart="@dimen/seekbar_margin_sides"
+        android:layout_marginTop="@dimen/seekbar_margin_top"
+        android:contentDescription="@string/strength_seek_bar_content_description"
+        app:layout_constraintStart_toEndOf="@id/iutDecrement"
+        app:layout_constraintEnd_toStartOf="@id/lkmIncrement"
+        app:layout_constraintTop_toBottomOf="@id/sadTitle"
+        app:layout_constraintWidth_default="wrap"
+        />
+
+    <ImageView
+        android:id="@+id/lkmIncrement"
+        style="@style/SeekBarButton"
+        android:layout_width="@dimen/seekbar_button_size"
+        android:layout_height="@dimen/seekbar_button_size"
+        android:contentDescription="@string/sugar_increase_content_description"
+        app:layout_constraintStart_toEndOf="@id/jkgSeekBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sadTitle"
+        app:layout_constraintBottom_toBottomOf="@id/jkgSeekBar"
+        app:layout_constraintWidth_default="wrap"
+        app:srcCompat="@drawable/vd_add_black_24dp"
+        />
+
+    <TextView
+        android:id="@+id/treTitle"
+        style="@style/ParameterTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/param_title_margin_top"
+        android:text="@string/skill"
+        app:layout_constraintEnd_toStartOf="@id/kagValue"
+        app:layout_constraintStart_toStartOf="@id/jfgSeekBar"
+        app:layout_constraintTop_toBottomOf="@id/jkgSeekBar"
+        app:layout_constraintHorizontal_weight="3"
+        tools:text="Project lifetime"
+        />
+
+    <TextView
+        android:id="@+id/kagValue"
+        style="@style/ParameterValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/treTitle"
+        app:layout_constraintEnd_toEndOf="@id/jfgSeekBar"
+        app:layout_constraintBaseline_toBaselineOf="@id/treTitle"
+        app:layout_constraintHorizontal_weight="2"
+        tools:text="49 years"
+        />
+
+    <ImageView
+        android:id="@+id/frtDecrement"
+        style="@style/SeekBarButton"
+        android:layout_width="@dimen/seekbar_button_size"
+        android:layout_height="@dimen/seekbar_button_size"
+        android:contentDescription="@string/salt_decrease_content_description"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/jfgSeekBar"
+        app:layout_constraintTop_toBottomOf="@id/treTitle"
+        app:layout_constraintBottom_toBottomOf="@id/jfgSeekBar"
+        app:layout_constraintWidth_default="wrap"
+        app:srcCompat="@drawable/vd_remove_black_24dp"
+        />
+
+    <SeekBar
+        android:id="@+id/jfgSeekBar"
+        style="@style/ParameterSeekBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:maxHeight="@dimen/seekbar_max_height"
+        android:layout_marginEnd="@dimen/seekbar_margin_sides"
+        android:layout_marginStart="@dimen/seekbar_margin_sides"
+        android:layout_marginTop="@dimen/seekbar_margin_top"
+        android:contentDescription="@string/skill_seek_bar_content_description"
+        app:layout_constraintStart_toEndOf="@id/frtDecrement"
+        app:layout_constraintEnd_toStartOf="@id/sdfIncrement"
+        app:layout_constraintTop_toBottomOf="@id/treTitle"
+        app:layout_constraintWidth_default="wrap"
+        />
+
+    <ImageView
+        android:id="@+id/sdfIncrement"
+        style="@style/SeekBarButton"
+        android:layout_width="@dimen/seekbar_button_size"
+        android:layout_height="@dimen/seekbar_button_size"
+        android:contentDescription="@string/salt_increase_content_description"
+        app:layout_constraintStart_toEndOf="@id/jfgSeekBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/treTitle"
+        app:layout_constraintBottom_toBottomOf="@id/jfgSeekBar"
+        app:layout_constraintWidth_default="wrap"
+        app:srcCompat="@drawable/vd_add_black_24dp"
+        />
+
+    <TextView
+        android:id="@+id/svdFactorTitle"
+        style="@style/ParameterTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/param_title_margin_top"
+        android:text="@string/pepper"
+        app:layout_constraintEnd_toStartOf="@id/wegValue"
+        app:layout_constraintStart_toStartOf="@id/saltSeekBar"
+        app:layout_constraintTop_toBottomOf="@id/jfgSeekBar"
+        app:layout_constraintHorizontal_weight="3"
+        tools:text="Discount factor"
+        />
+
+    <TextView
+        android:id="@+id/wegValue"
+        style="@style/ParameterValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/svdFactorTitle"
+        app:layout_constraintEnd_toEndOf="@id/saltSeekBar"
+        app:layout_constraintBaseline_toBaselineOf="@id/svdFactorTitle"
+        app:layout_constraintHorizontal_weight="1"
+        tools:text="14%"
+        />
+
+    <ImageView
+        android:id="@+id/saltDecrement"
+        style="@style/SeekBarButton"
+        android:layout_width="@dimen/seekbar_button_size"
+        android:layout_height="@dimen/seekbar_button_size"
+        android:contentDescription="@string/pepper_decrease_content_description"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/saltSeekBar"
+        app:layout_constraintTop_toBottomOf="@id/svdFactorTitle"
+        app:layout_constraintBottom_toBottomOf="@id/saltSeekBar"
+        app:layout_constraintWidth_default="wrap"
+        app:srcCompat="@drawable/vd_remove_black_24dp"
+        />
+
+    <SeekBar
+        android:id="@+id/saltSeekBar"
+        style="@style/ParameterSeekBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:maxHeight="@dimen/seekbar_max_height"
+        android:layout_marginEnd="@dimen/seekbar_margin_sides"
+        android:layout_marginStart="@dimen/seekbar_margin_sides"
+        android:layout_marginTop="@dimen/seekbar_margin_top"
+        android:contentDescription="@string/agility_seek_bar_content_description"
+        app:layout_constraintStart_toEndOf="@id/saltDecrement"
+        app:layout_constraintEnd_toStartOf="@id/saltIncrement"
+        app:layout_constraintTop_toBottomOf="@id/svdFactorTitle"
+        app:layout_constraintWidth_default="wrap"
+        />
+
+    <ImageView
+        android:id="@+id/saltIncrement"
+        style="@style/SeekBarButton"
+        android:layout_width="@dimen/seekbar_button_size"
+        android:layout_height="@dimen/seekbar_button_size"
+        android:contentDescription="@string/pepper_increase_content_description"
+        app:layout_constraintStart_toEndOf="@id/saltSeekBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/svdFactorTitle"
+        app:layout_constraintBottom_toBottomOf="@id/saltSeekBar"
+        app:layout_constraintWidth_default="wrap"
+        app:srcCompat="@drawable/vd_add_black_24dp"
+        />
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/resetButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/reset"
+        app:backgroundTint="@color/buttonGreen"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/saltSeekBar"
+        />
+
+  </android.support.constraint.ConstraintLayout>
+
+</android.support.v4.widget.NestedScrollView>

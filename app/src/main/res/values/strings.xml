@@ -1,0 +1,83 @@
+<!--
+  ~ Copyright (c) 2019 Andrii Chubko
+  -->
+
+<!DOCTYPE resources [
+    <!ENTITY kilometer "km">
+    <!ENTITY mile "m">
+    <!ENTITY kilometer_hour "&kilometer;/h">
+    <!ENTITY mile_hour "&mile;/h">
+    ]>
+
+<resources>
+  <string name="app_name">Clean Architecture Sample</string>
+  <string name="tooltip_help">Help</string>
+  <string name="tooltip_select_units">Select nationality</string>
+  <string name="help_content_description">Help</string>
+
+  <!--Units-->
+  <string name="usd_code">KOR</string>
+  <string name="eur_code">JAP</string>
+  <string name="gbp_code">CHI</string>
+  <string name="cents_label">Women</string>
+  <string name="pence_label">Men</string>
+  <string name="usd_sign">!</string>
+  <string name="eur_sign">\?</string>
+  <string name="gbp_sign">&amp;</string>
+  <string name="kilometer_hour">&kilometer_hour;</string>
+  <string name="mile_hour">&mile_hour;</string>
+  <string name="kilometer">&kilometer;</string>
+  <string name="mile">&mile;</string>
+  <string name="mile_suffix"> &mile;</string>
+  <string name="millions_suffix">\u0020M</string>
+  <string name="millions_nationality_suffix">\u0020%sM</string>
+  <string name="reset">Reset</string>
+  <!--Units-->
+
+  <!--Expectancy calculation screen-->
+  <string name="life_expectancy">Life\nexpectancy</string>
+  <string name="field_hint">0.00</string>
+  <string name="sugar">Sugar</string>
+  <string name="pepper">Pepper</string>
+  <string name="skill">Skill</string>
+  <string name="foals">Total life forever</string>
+  <string name="dumbo">Dumbo Unchained</string>
+  <string name="manliness_capacity">Manliness</string>
+  <string name="expectancy_parameter_percent_value">%d%%</string>
+  <string name="expectancy_result">%1$s%2$s / %3$s</string>
+  <string name="expectancy_result_unit_menu_description">%1$s / %2$s</string>
+  <string name="expectancy_settings_saving_error">Couldn\'t save current settings</string>
+  <string name="expectancy_cache_loading_error">Couldn\'t load previous data</string>
+  <string name="expectancy_calculation_error">Couldn\'t calculate the result</string>
+  <plurals name="expectancy_parameter_years_value">
+    <item quantity="one">%d person</item>
+    <item quantity="other">%d people</item>
+  </plurals>
+
+  <string name="sugar_decrease_content_description">Decrease sugar by 1 percent</string>
+  <string name="sugar_increase_content_description">Increase sugar by 1 percent</string>
+  <string name="salt_decrease_content_description">Decrease salt by 1 year</string>
+  <string name="salt_increase_content_description">Increase salt by 1 year</string>
+  <string name="pepper_decrease_content_description">Decrease pepper by 1 percent</string>
+  <string name="pepper_increase_content_description">Increase pepper by 1 percent</string>
+  <string name="agility_seek_bar_content_description">Agility seek bar</string>
+  <string name="skill_seek_bar_content_description">Skill seek bar</string>
+  <string name="strength_seek_bar_content_description">Strength seek bar</string>
+  <!--Expectancy calculation screen-->
+
+  <!--Help screen-->
+  <string name="title_activity_help">User Guide</string>
+  <string name="help_main_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla mattis turpis eget arcu fringilla tempor. Nullam neque diam, consectetur vel sollicitudin vitae, feugiat vel magna. Nullam vitae felis ac libero tristique scelerisque et ut ante. Donec sit amet lorem sed dui viverra porta sed a ex. Mauris volutpat elit varius, condimentum justo id, volutpat dolor. Aenean elementum libero eu scelerisque posuere. Curabitur id augue sem.\n\nCurabitur at finibus nibh, sed maximus erat. Praesent condimentum facilisis dolor vehicula fermentum. In euismod erat ante, vitae pharetra metus vestibulum ut. Suspendisse nec est ut nibh rutrum ultrices nec eget nulla. Suspendisse tincidunt euismod erat, sed posuere massa facilisis id. Praesent quis vulputate erat. Cras quis dolor eget nisi vestibulum viverra sit amet elementum lectus.\n\nProin tortor sapien, sollicitudin pellentesque nisi sit amet, finibus semper metus. Donec vel aliquam lorem. Morbi vitae porta nisl, sed lacinia ipsum. In ut diam enim. Etiam hendrerit, dui sit amet posuere porttitor, massa leo mollis enim, rhoncus maximus tellus ex sit amet nisl. Curabitur posuere vestibulum blandit. Fusce id scelerisque orci. Nulla consectetur maximus sollicitudin. Integer eu gravida sapien. Vestibulum congue sapien lorem, lacinia vestibulum neque mollis eget.\n\nQuisque sit amet ante nec turpis eleifend consectetur. Phasellus porta bibendum semper. Cras eu efficitur mi. Maecenas id metus nibh. Morbi dignissim mauris dolor, molestie blandit enim dictum eu. Morbi luctus arcu laoreet, molestie purus a, auctor nisi. Praesent iaculis ligula sem, non rutrum metus consequat quis. Praesent ante tellus, pretium in semper ultricies, placerat ac sapien. Etiam condimentum ipsum ac tortor dignissim imperdiet. Proin in dapibus diam. Aenean egestas lorem vitae libero commodo laoreet. Aenean porta ullamcorper suscipit. Morbi sed sem aliquam, condimentum ipsum ac, egestas ex.\n\nMauris egestas tellus quam, at consequat nunc imperdiet a. Maecenas pharetra quam et libero semper venenatis. Suspendisse potenti. Nulla convallis ac dolor ut consequat. Nunc auctor sagittis gravida. Donec vitae mauris et libero tristique efficitur et quis augue. Aliquam aliquet magna eu lacus cursus, in venenatis enim placerat. </string>
+  <!--Help screen-->
+
+  <!--Toast-->
+  <string name="toast_copied_result_to_clipboard">Copied result to clipboard</string>
+  <!--Toast-->
+
+  <!--Dialogs-->
+  <string name="welcome_dialog_title">Welcome to this sample app!</string>
+  <string name="welcome_dialog_content">Here you can just play a bit with slider animations and look at pretty text field boxes and look at some nonsense data.</string>
+  <string name="welcome_dialog_ok">@android:string/ok</string>
+  <!--Dialogs-->
+
+</resources>

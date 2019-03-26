@@ -1,0 +1,21 @@
+<!--
+  ~ Copyright (c) 2019 Andrii Chubko
+  -->
+
+<resources>
+  <dimen name="app_bar_height">68dp</dimen>
+
+  <dimen name="param_box_margin_top">8dp</dimen>
+  <dimen name="param_text_size">16sp</dimen>
+  <dimen name="seekbar_button_padding">8dp</dimen>
+  <dimen name="seekbar_button_size">36dp</dimen>
+  <dimen name="param_title_margin_top">8dp</dimen>
+  <dimen name="seekbar_max_height">16dp</dimen>
+  <dimen name="seekbar_margin_sides">5dp</dimen>
+  <dimen name="seekbar_margin_top">4dp</dimen>
+  <dimen name="screen_top_margin">8dp</dimen>
+  <dimen name="nationality_btn_margin_end">16dp</dimen>
+  <dimen name="screen_side_margin">16dp</dimen>
+  <dimen name="corner_radius_mini">4dp</dimen>
+
+</resources>

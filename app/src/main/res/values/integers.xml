@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2019 Andrii Chubko
+  -->
+
+<resources>
+  <integer name="aad_min">10</integer>
+  <integer name="aad_max">100</integer>
+  <integer name="bpa_min">2</integer>
+  <integer name="bpa_max">50</integer>
+  <integer name="mdb_min">1</integer>
+  <integer name="mdb_max">30</integer>
+</resources>

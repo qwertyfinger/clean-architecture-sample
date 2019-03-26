@@ -1,0 +1,8 @@
+/*
+ * Copyright (c) 2019 Andrii Chubko
+ */
+
+include ':app'
+rootProject.children.each { subproject ->
+  subproject.buildFileName = "${subproject.name}.gradle"
+}
